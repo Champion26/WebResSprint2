@@ -47,7 +47,7 @@ namespace WebResSprint2
                             if (vw.Name == dr["VideoName"].ToString())
                             {
                                 totalWatched += 1;
-                                WaitTime += (i/10) * (Convert.ToDateTime(dr["ViewDate"].ToString()) - minDate).TotalDays;
+                                WaitTime += (((RecommendedVideos.Count + 1) - i)/10) * (Convert.ToDateTime(dr["ViewDate"].ToString()) - minDate).TotalDays;
                                 viewed.Add(vw.Name);
                             }
                         }
